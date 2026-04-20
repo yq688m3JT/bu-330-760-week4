@@ -8,11 +8,10 @@ from calculator import calculate
 
 load_dotenv()
 
-# Configure your model below. Examples:
-#   "google-gla:gemini-2.5-flash"       (needs GOOGLE_API_KEY)
-#   "openai:gpt-4o-mini"                (needs OPENAI_API_KEY)
-#   "anthropic:claude-sonnet-4-6"    (needs ANTHROPIC_API_KEY)
-MODEL = "google-gla:gemini-2.5-flash"
+# Configure your model below.
+# DeepSeek is OpenAI-compatible, so we use the openai provider.
+# Make sure OPENAI_BASE_URL=https://api.deepseek.com is set in your .env
+MODEL = "openai:deepseek-chat"
 
 agent = Agent(
     MODEL,
